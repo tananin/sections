@@ -1,0 +1,70 @@
+[[-
+-------------------------------------------------------------------------------------------------------
+Header
+-------------------------------------------------------------------------------------------------------
+
+
+
+Шпаргалка
+-------------------------------------------------------------------------------------------------------
+[[++site_url]]                                  URL главной страницы
+
+[[#[[++setting]].site__name]]                   Имя сайта
+[[#[[++setting]].site__slogan]]                 Слоган
+[[#[[++setting]].site__logotip]]                Логотип
+
+[[#[[++setting]].site__address]]                Адрес
+[[#[[++setting]].site__mail]]                   Email
+[[#[[++setting]].site__phone]]                  Телефон
+[[#[[++setting]].site__regim]]                  Режим работы
+[[#[[++setting]].site__map]]                    Схема проезда
+=======================================================================================================
+]]
+
+<div id="header">
+    <div id="logo_site"><a href="[[++site_url]]">
+        <img src="[[#[[++setting]].site__logotip]]" alt="[[#[[++setting]].site__slogan]]" title="[[#[[++setting]].site__slogan]]" id="logo"/>
+        <span class="slogan">Скупка картриджей в СПб</span>
+    </a>
+
+    </div>
+    <div class="region region-header">
+        <div id="block-search-form" class="block block-search">
+            <div class="content">
+                [[$search__form]]
+            </div>
+        </div>
+        <div id="block-system-main-menu" class="block block-system block-menu">
+            <div class="content">
+                [[$nav-main]]
+            </div>
+        </div>
+        <div id="block-block-10" class="block block-block">
+            <div class="content">
+                <div class="left_wrap">
+                    <div class="addres">
+                        [[#[[++setting]].site__address]]
+                    </div>
+                    <div class="link">
+                        <a href="[[~14]]">Смотреть на карте</a>
+                    </div>
+                </div>
+                <div class="right_wrap">
+                    <div class="text">
+                        [[#[[++setting]].site__regim]]
+                    </div>
+                    <div class="phone">
+                        [[#[[++setting]].site__phone]]
+                    </div>
+                </div>
+            </div>
+        </div>
+        [[!Shopkeeper3@shop]]
+
+        <div id="block-block-15" class="block block-block">
+            <div class="content">
+                <a href="[[~12]]">Оставить заказ</a>
+            </div>
+        </div>
+    </div>
+</div>

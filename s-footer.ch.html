@@ -1,0 +1,136 @@
+[[-
+-------------------------------------------------------------------------------------------------------
+Footer
+-------------------------------------------------------------------------------------------------------
+
+Шпаргалка
+-------------------------------------------------------------------------------------------------------
+[[#[[++setting]].site__name]]                   Имя сайта
+[[#[[++setting]].site__slogan]]                 Слоган
+[[#[[++setting]].site__logotip]]                Логотип
+
+[[#[[++setting]].site__address]]                Адрес
+[[#[[++setting]].site__mail]]                   Email
+[[#[[++setting]].site__phone]]                  Телефон
+[[#[[++setting]].site__regim]]                  Режим работы
+[[#[[++setting]].site__map]]                    Схема проезда
+=======================================================================================================
+
+
+Копирайт
+-------------------------------------------------------------------------------------------------------
+[[#[[++setting]].site__copyright]]
+=======================================================================================================
+
+Счётчики
+-------------------------------------------------------------------------------------------------------
+[[#[[++setting]].counter__yandex]]
+[[#[[++setting]].counter__google]]
+[[#[[++setting]].counter__liveinternet]]
+=======================================================================================================
+
+JS для страницы
+-------------------------------------------------------------------------------------------------------
+[[If? &subject=`[[*js]]` &operator=`notempty` &then=`[[*js]]`&else=``]]
+=======================================================================================================
+
+Разработчик
+-------------------------------------------------------------------------------------------------------
+[[s-devel]]
+=======================================================================================================
+
+]]
+
+<div id="footer">
+    <div class="region region-footer">
+        <div id="block-block-14" class="block block-block">
+            <div class="content">
+                [[#[[++setting]].counter__yandex]]
+                [[#[[++setting]].counter__google]]
+            </div>
+        </div>
+        <div id="block-block-6" class="block block-block">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="[[#[[++setting]].site__logotip--footer]]" alt=""/>
+                    </a>
+                </div>
+                <div class="contacts">
+                    Позвоните нам: <span class="phone">[[#[[++setting]].site__phone]]</span> Напишите нам: <a
+                        href="mailto:[[#[[++setting]].site__mail]]">[[#[[++setting]].site__mail]]</a>
+                </div>
+                <div class="metric_kod">
+                    [[#[[++setting]].counter__liveinternet]]
+
+                </div>
+                <div class="devel">[[s-devel]]</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="assets/js/jquery.once.js"></script>
+<script type="text/javascript" src="assets/js/drupal.js"></script>
+<script type="text/javascript" src="assets/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="assets/js/jcarousel.js"></script>
+<script type="text/javascript">
+
+    jQuery.extend(Drupal.settings, {
+        "basePath": "\/",
+        "pathPrefix": "",
+        "jcarousel": {
+            "ajaxPath": "\/jcarousel\/ajax\/views",
+            "carousels": {
+                "jcarousel-dom-1": {
+                    "view_options": {
+                        "view_args": "",
+                        "view_path": "home",
+                        "view_base_path": null,
+                        "view_display_id": "block_1",
+                        "view_name": "slide",
+                        "jcarousel_dom_id": 1
+                    },
+                    "wrap": "both",
+                    "skin": "default",
+                    "visible": 1,
+                    "scroll": 1,
+                    "auto": 10,
+                    "autoPause": 1,
+                    "start": 1,
+                    "selector": ".jcarousel-dom-1"
+                },
+                "jcarousel-dom-2": {
+                    "view_options": {
+                        "view_args": "",
+                        "view_path": "home",
+                        "view_base_path": null,
+                        "view_display_id": "block_1",
+                        "view_name": "brands",
+                        "jcarousel_dom_id": 2
+                    },
+                    "wrap": "circular",
+                    "skin": "default",
+                    "visible": 4,
+                    "scroll": 2,
+                    "autoPause": 1,
+                    "animation": "slow",
+                    "start": 1,
+                    "easing": "linear",
+                    "selector": ".jcarousel-dom-2"
+                }
+            }
+        },
+        "nicemessages": {"position": "bottom-left", "items": []}
+    });
+
+    
+</script>
+
+[[If? &subject=`[[*js]]` &operator=`notempty` &then=`[[*js]]`&else=``]]

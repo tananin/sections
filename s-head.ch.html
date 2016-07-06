@@ -1,0 +1,119 @@
+[[-
+-------------------------------------------------------------------------------------------------------
+HEAD
+-------------------------------------------------------------------------------------------------------
+
+Шпаргалка
+-------------------------------------------------------------------------------------------------------
+[[#[[++setting]].site__name]]               Название сайта
+[[#[[++setting]].site__slogan]]             Слоган сайта
+[[#[[++setting]].site__favicon]]            Favicon
+
+[[++site_url]]                              URL главной стр.
+[[*pagetitle]]                              Заголовок страницы
+=======================================================================================================
+
+
+
+<!--CDN-->
+<!--JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!--Foundation-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
+<script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+
+
+<!--Служебные-->
+<meta http-equiv="Content-Type" content="type; charset=[[++modx_charset]]"/>
+<link rel="shortcut icon" href="[[++site_url]][[#[[++setting]].site__favicon]]" type="image/png"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<base href="[[++site_url]]" />
+
+<!--SEO-->
+[[If?&subject=`[[*seo__title]]`&operator=`notempty`&then=`<title>[[*seo__title]]</title>`&else=`<title>[[#[[++setting]].seo__title]]</title>`]]
+[[If?&subject=`[[*seo__keywords]]`&operator=`notempty`&then=`<meta name="Keywords" content="[[*seo__keywords]]"/>`&else=``]]
+[[If?&subject=`[[*seo__description]]`&operator=`notempty`&then=`<meta name="Description" content="[[*seo__description]]"/>`&else=``]]
+[[If? &subject=`[[*seo__noindex]]` &operator=`EQ` &operand=`1` &then=`<meta name="robots" content="noindex, nofollow"/>` &else=``]]
+
+
+<!--Open Graph-->
+<meta property="og:image" content="[[If?&subject=`[[*og__image]]`&operator=`notempty`&then=`[[++site_url]][[*og__image:phpthumbon=`w=200&h=200&rc=1`]]`&else=`[[++site_url]][[#[[++setting]].site__logotip:phpthumbon=`w=200&h=200&rc=1`]]`]]"/>
+<meta property="og:site_name" content="[[*og__name]]"/>
+<meta property="og:title" content="[[If?&subject=`[[*og__title]]`&operator=`notempty`&then=`[[*og__title]]`&else=`[[*pagetitle]]`]]"/>
+<meta property="og:description" content="[[If?&subject=`[[*og__description]]`&operator=`notempty`&then=`[[*og__description]]`&else=`[[#[[++setting]].site__slogan]]`]]" />
+<meta property="og:url" content="[[~[[*id]]? &scheme=`full`]]"/>
+<meta property="og:type" content="[[*og__type]]"/>
+
+<!--Style и HEAD -->
+[[If? &subject=`[[*head]]` &operator=`notempty` &then=`[[*head]]`&else=``]]
+[[If? &subject=`[[*style]]` &operator=`notempty` &then=`<style>[[*style]]</style>`&else=``]]
+
+<!-- End HEAD-->
+=======================================================================================================
+
+<style type="text/css" media="all">
+    @import url("assets/style/spb/style.css");
+    @import url("assets/style/spb/style2.css");
+</style>
+
+]]
+
+<meta http-equiv="Content-Type" content="type; charset=[[++modx_charset]]"/>
+<link rel="shortcut icon" href="[[++site_url]][[#[[++setting]].site__favicon]]" type="image/png"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<base href="[[++site_url]]" />
+
+[[If?&subject=`[[*seo__title]]`&operator=`notempty`&then=`<title>[[*seo__title]]</title>`&else=`<title>[[#[[++setting]].seo__title]]</title>`]]
+[[If?&subject=`[[*seo__keywords]]`&operator=`notempty`&then=`<meta name="Keywords" content="[[*seo__keywords]]"/>`&else=``]]
+[[If?&subject=`[[*seo__description]]`&operator=`notempty`&then=`<meta name="Description" content="[[*seo__description]]"/>`&else=``]]
+[[If? &subject=`[[*seo__noindex]]` &operator=`EQ` &operand=`1` &then=`<meta name="robots" content="noindex, nofollow"/>` &else=``]]
+
+<meta property="og:image" content="[[If?&subject=`[[*og__image]]`&operator=`notempty`&then=`[[++site_url]][[*og__image:phpthumbon=`w=200&h=200&rc=1`]]`&else=`[[++site_url]][[#[[++setting]].site__logotip:phpthumbon=`w=200&h=200&rc=1`]]`]]"/>
+<meta property="og:site_name" content="[[*og__name]]"/>
+<meta property="og:title" content="[[If?&subject=`[[*og__title]]`&operator=`notempty`&then=`[[*og__title]]`&else=`[[*pagetitle]]`]]"/>
+<meta property="og:description" content="[[If?&subject=`[[*og__description]]`&operator=`notempty`&then=`[[*og__description]]`&else=`[[#[[++setting]].site__slogan]]`]]" />
+<meta property="og:url" content="[[~[[*id]]? &scheme=`full`]]"/>
+<meta property="og:type" content="[[*og__type]]"/>
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css">
+
+
+<style type="text/css" media="all">
+    @import url("assets/style/system.base.css");
+    @import url("assets/style/system.menus.css");
+    @import url("assets/style/system.messages.css");
+    @import url("assets/style/system.theme.css");
+</style>
+<style type="text/css" media="all">
+    @import url("assets/style/field.css");
+    @import url("assets/style/node.css");
+    @import url("assets/style/search.css");
+    @import url("assets/style/user.css");
+
+    @import url("assets/style/views.css");
+    @import url("assets/style/ckeditor.css");
+</style>
+<style type="text/css" media="all">
+    @import url("assets/style/ctools.css");
+    @import url("assets/style/jquery.jgrowl.min.css");
+    @import url("assets/style/nicemessages_positions.css");
+    @import url("assets/style/tagclouds.css");
+    @import url("assets/style/jcarousel-default.css");
+</style>
+<style type="text/css" media="all">
+    @import url("assets/style/spb/style.css");
+    @import url("assets/style/spb/style2.css");
+</style>
+
+
+[[If? &subject=`[[*head]]` &operator=`notempty` &then=`[[*head]]`&else=``]]
+[[If? &subject=`[[*style]]` &operator=`notempty` &then=`<style>[[*style]]</style>`&else=``]]
